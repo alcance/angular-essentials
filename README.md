@@ -109,3 +109,41 @@ The ngShow directive changes the visibility of an element based on its display p
 ## The ngIf directive
 
 The nglf directive could be used in the same way as the ngShow directive; however, while the ngShow directive just deals with the visibility of the element, the ngIf directive prevents the rendering of an element in our template.
+
+
+## The ngInclude directive
+
+AngularJS provides a way to include other external HTML fragments in our pages.
+The ngInclude directive allows the fragmentation and reuse of the application layout and is an important concept to explore
+
+
+## Creating our own directives
+
+Now that we have already studied a bunch of built-in directives of a framework, it's time to create our own reusable components! First, we need to know how to register a new directive into our module.
+
+Basically, it's the same process that we use for the controller; however, the directives require the creation of something called Directive Definition Object that will be
+used to configure the directive's behavior.
+
+### template
+
+Imagine the number of times you have had the same snippet of the HTML code
+repeated over your application code. In the following code snippet, we are going to
+create a new directive with the code to reuse
+
+
+### templateUrl
+
+There is another way to achieve the same goal with more quality. We just need
+to move the HTML snippet to an isolated file and bind it using the templateUrl property.
+
+
+### replace
+
+Sometimes it might be interesting to discard the original element, where the directive
+was attached, replacing it by the directive's template. This can be done by enabling
+the replace property
+
+
+
+
+
