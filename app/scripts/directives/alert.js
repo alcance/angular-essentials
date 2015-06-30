@@ -9,7 +9,8 @@
 angular.module('angessentialsApp')
   .directive('alert', function () {
     return {
-      templateUrl: "views/alert.html"
+      restrict: 'E',
+      templateUrl: "views/alert.html",
       replace: true
     };
   });

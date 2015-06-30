@@ -143,7 +143,39 @@ Sometimes it might be interesting to discard the original element, where the dir
 was attached, replacing it by the directive's template. This can be done by enabling
 the replace property
 
+### restrict
 
+We attached our first directive by defining it as an attribute of the element. However,
+when we create a new directive as a reusable component, it doesn't make much
+sense. In this case, a better approach can restrict the directive to be an element.
+
+Also, it is possible to combine more than one restriction at the same time by just
+using a subset combination of EACM. If the directive is applied without the restrictions
+configuration, it will be ignored by the framework.
+
+### scope
+
+Our alert component is almost ready but it has a problem! The topic and the
+description are hardcoded inside the component.
+The best thing to do is to pass the data that needs to be rendered as a parameter.
+In order to achieve this, we need to create a new property inside our directive
+configuration object called scope.
+
+Prefix Details
+
+This prefix passes the data as a string.
+
+& This prefix binds the parameter with an expression in the context of
+ the parent scope. It is useful if you would like to provide some outside
+functions to the directive.
+
+{|
+    | Prefix, Details
+    |-
+    | @, Passes the data as a string.
+    | =, Creates a bidirectional relationship between a controller's scope  property and a local scope directive property.
+    | &,  binds the parameter with an expression in the context of the parent scope. It is useful if you would like to provide some outsidefunctions to the directive.
+    |}
 
 
 
